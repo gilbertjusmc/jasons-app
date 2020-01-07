@@ -1,14 +1,19 @@
 import React from 'react';
 
-function NavBar(props) {
+function NavBar() {
+	const navList = [
+		"Home",
+		"About",
+		"Contact"
+	]
+
+	const outPut = navList.map((navList) =>
+		<li>{navList}</li>
+	)
+
 	return (
 		<>
-			<h1>Jason Gilbert</h1>
-			<ul>
-				<li>Home</li>
-				<li>About {props.name}</li>
-				<li>Contact {props.name}</li>
-			</ul>
+			{outPut}
 		</>
 	);
 }
